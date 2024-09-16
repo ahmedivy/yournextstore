@@ -1,7 +1,7 @@
-import { type SVGAttributes } from "react";
 import { getTranslations } from "next-intl/server";
-import { YnsLink } from "@/ui/yns-link";
+import { type SVGAttributes } from "react";
 import { Newsletter } from "@/ui/footer/newsletter.client";
+import { YnsLink } from "@/ui/yns-link";
 
 const sections = [
 	{
@@ -40,7 +40,7 @@ export async function Footer() {
 	const t = await getTranslations("Global.footer");
 
 	return (
-		<footer className="w-full bg-neutral-50 p-6 text-neutral-800 md:py-12">
+		<footer className="w-full p-6 md:py-12">
 			<div className="container flex max-w-7xl flex-row flex-wrap justify-center gap-16 text-sm sm:justify-between">
 				<div className="">
 					<div className="flex w-full max-w-sm flex-col gap-2">
@@ -66,21 +66,21 @@ export async function Footer() {
 					))}
 				</nav>
 			</div>
-			<div className="container mt-8 flex max-w-7xl flex-col items-center justify-between gap-4 text-sm text-neutral-500 md:flex-row">
+			<div className="container mt-8 flex max-w-7xl flex-col items-center justify-between gap-4 text-sm text-muted-foreground/80 md:flex-row">
 				<div>
 					<p>© 2024 Your Next Store</p>
 					<p>Delightfully commerce for everyone</p>
 				</div>
 				<div className="flex items-center gap-4">
 					<YnsLink
-						className="inline-flex items-center gap-1 transition-colors hover:text-neutral-700"
+						className="inline-flex items-center gap-1 transition-colors hover:text-muted-foreground"
 						href="https://x.com/zaiste"
 					>
 						<TwitterIcon className="h-4 w-4" /> @zaiste
 						<span className="sr-only">Twitter</span>
 					</YnsLink>
 					<YnsLink
-						className="inline-flex items-center gap-1 transition-colors hover:text-neutral-700"
+						className="inline-flex items-center gap-1 transition-colors hover:text-muted-foreground"
 						href="https://x.com/typeofweb"
 					>
 						<TwitterIcon className="h-4 w-4" /> @typeofweb
